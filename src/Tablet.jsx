@@ -3,7 +3,7 @@ export default function Tablet() {
   // TODO: call authenticate when form is submitted
 
   return (
-    <section>
+    <section >
       <p>
         The sound of your name thuds against the gate as the two badgers furrow
         their brows. The badger on the right beckons you to approach.
