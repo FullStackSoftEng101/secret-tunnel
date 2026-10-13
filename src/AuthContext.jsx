@@ -9,7 +9,23 @@ export function AuthProvider({ children }) {
   const [location, setLocation] = useState("GATE");
 
   // TODO: signup
+  async function signup(username) {
+    try {
+      const response = await fetch(API + "/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(username),
+      });
+      const result = await response.json();
+      // Something like this, depends on the API, but they'll send back a token
+      //return
 
+      setToken(result.token);
+      setLocation("TABLET");
+    } catch (e) {
+      console.error(e);
+    }
+  }
   // TODO: authenticate
 
   const value = { location };
