@@ -28,7 +28,7 @@ export function AuthProvider({ children }) {
   }
   // TODO: authenticate
 
-  const value = { location };
+  const value = { location, signup };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
